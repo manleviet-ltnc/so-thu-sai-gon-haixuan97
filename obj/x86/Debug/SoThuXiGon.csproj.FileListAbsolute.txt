@@ -1,0 +1,8 @@
+D:\github\SoThuXiGon\SoThuXiGon\bin\Debug\SoThuXiGon.exe
+D:\github\SoThuXiGon\SoThuXiGon\bin\Debug\SoThuXiGon.pdb
+D:\github\SoThuXiGon\SoThuXiGon\obj\x86\Debug\SoThuXiGon.Properties.Resources.resources
+D:\github\SoThuXiGon\SoThuXiGon\obj\x86\Debug\SoThuXiGon.csproj.GenerateResource.Cache
+D:\github\SoThuXiGon\SoThuXiGon\obj\x86\Debug\SoThuXiGon.exe
+D:\github\SoThuXiGon\SoThuXiGon\obj\x86\Debug\SoThuXiGon.pdb
+D:\github\SoThuXiGon\SoThuXiGon\obj\x86\Debug\SoThuXiGon.csprojResolveAssemblyReference.cache
+D:\github\SoThuXiGon\SoThuXiGon\obj\x86\Debug\SoThuXiGon.mnu.resources
