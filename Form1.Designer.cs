@@ -38,6 +38,8 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hồSơToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuLoad = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +50,6 @@
             this.mnuCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuCut = new System.Windows.Forms.ToolStripMenuItem();
             this.muPaste = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblTime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -79,7 +80,7 @@
             this.lstThuMoi.FormattingEnabled = true;
             this.lstThuMoi.Location = new System.Drawing.Point(3, 16);
             this.lstThuMoi.Name = "lstThuMoi";
-            this.lstThuMoi.Size = new System.Drawing.Size(358, 267);
+            this.lstThuMoi.Size = new System.Drawing.Size(358, 247);
             this.lstThuMoi.TabIndex = 2;
             this.toolTip1.SetToolTip(this.lstThuMoi, "Ấn chuột và kéo sang Danh sách thú để tạo Sở thú");
             this.lstThuMoi.DragEnter += new System.Windows.Forms.DragEventHandler(this.ListBox_DragEnter);
@@ -92,7 +93,7 @@
             this.lstDanhSach.FormattingEnabled = true;
             this.lstDanhSach.Location = new System.Drawing.Point(367, 16);
             this.lstDanhSach.Name = "lstDanhSach";
-            this.lstDanhSach.Size = new System.Drawing.Size(353, 267);
+            this.lstDanhSach.Size = new System.Drawing.Size(353, 247);
             this.lstDanhSach.TabIndex = 3;
             this.lstDanhSach.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstDanhSach_DragDrop);
             this.lstDanhSach.DragEnter += new System.Windows.Forms.DragEventHandler(this.ListBox_DragEnter);
@@ -104,7 +105,7 @@
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.ImageIndex = 0;
             this.btnSave.ImageList = this.imageList1;
-            this.btnSave.Location = new System.Drawing.Point(696, 327);
+            this.btnSave.Location = new System.Drawing.Point(696, 292);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(24, 23);
             this.btnSave.TabIndex = 5;
@@ -129,17 +130,40 @@
             this.tableLayoutPanel2.Controls.Add(this.lstDanhSach, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.lblTime, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.btnSave, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.btnXoa, 1, 4);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 24);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(723, 353);
             this.tableLayoutPanel2.TabIndex = 7;
             this.tableLayoutPanel2.Click += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.lblTime, 2);
+            this.lblTime.Location = new System.Drawing.Point(3, 266);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(97, 13);
+            this.lblTime.TabIndex = 6;
+            this.lblTime.Text = "Bây giờ là... ngày...";
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXoa.Location = new System.Drawing.Point(645, 325);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 23);
+            this.btnXoa.TabIndex = 7;
+            this.btnXoa.Text = "Delete";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // menuStrip1
             // 
@@ -222,16 +246,6 @@
             this.muPaste.Size = new System.Drawing.Size(136, 22);
             this.muPaste.Text = "Dán";
             // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.tableLayoutPanel2.SetColumnSpan(this.lblTime, 2);
-            this.lblTime.Location = new System.Drawing.Point(3, 286);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(97, 13);
-            this.lblTime.TabIndex = 6;
-            this.lblTime.Text = "Bây giờ là... ngày...";
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -249,6 +263,7 @@
             this.MinimumSize = new System.Drawing.Size(289, 235);
             this.Name = "mnu";
             this.Text = "So Thu Xi Gon";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mnu_FormClosing);
             this.Load += new System.EventHandler(this.mnu_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ListBox_MouseDown);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -282,6 +297,7 @@
         private System.Windows.Forms.ToolStripMenuItem muPaste;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnXoa;
     }
 }
 
